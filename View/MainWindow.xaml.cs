@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assassin_sCreedWikiSked.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,8 +34,14 @@ namespace Assassin_sCreedWikiSked
 
         private void Progressbar(object sender, EventArgs e)
         {
-            if(this.bar.Value == 100){timer.Stop();}
-            else{this.bar.Value += 1;}
+            if(this.bar.Value == 100)
+            {
+                timer.Stop();
+                MenuWindow menuWindow = new MenuWindow();
+                this.Close();
+                menuWindow.ShowDialog();
+            }
+            else {this.bar.Value += 5;}
         }
     }
 }
