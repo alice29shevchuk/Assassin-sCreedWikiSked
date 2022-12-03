@@ -22,6 +22,10 @@ namespace Assassin_sCreedWikiSked.View
         public MenuWindow()
         {
             InitializeComponent();
+            //MediaPlayer mediaPlayer = new MediaPlayer();
+            //mediaPlayer.Open(new Uri("http://hubblesource.stsci.edu/sources/video/clips/details/images/hst_1.mpg", UriKind.Relative));
+            //mediaPlayer.Play();
+            
         }
     }
 }

@@ -4,12 +4,60 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assassin_sCreedWikiSked.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
         mc:Ignorable="d"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Icon="C:\Users\Admin\source\repos\Assassin`sCreedWikiSked\Resources\photo_2022-12-03_12-08-39.jpg"
         Title="Assassin`s Creed" Height="600" Width="800">
-    <Grid>
-        
+    <Grid  Background="#1e1f26">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="73*"></ColumnDefinition>
+            <ColumnDefinition Width="727*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <materialDesign:Card>
+            <TabControl Background="#1e1f26" materialDesign:ColorZoneAssist.Mode="Standard" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignNavigationRailTabControl}">
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel Width="auto" Height="auto">
+                            <materialDesign:PackIcon Width="24" Height="24" Foreground="#4d648d" HorizontalAlignment="Center" Kind="MovieOpen" />
+                            <TextBlock Foreground="#4d648d" HorizontalAlignment="Center" Text="Series" />
+                        </StackPanel>
+                    </TabItem.Header>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel Width="auto" Height="auto">
+                            <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center" Kind="AccountGroupOutline"  Foreground="#4d648d" />
+                            <TextBlock HorizontalAlignment="Center"  Foreground="#4d648d" Text="Characters" />
+                        </StackPanel>
+                    </TabItem.Header>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel Width="auto" Height="auto">
+                            <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center"  Foreground="#4d648d" Kind="Pistol" />
+                            <TextBlock HorizontalAlignment="Center" Text="Weapons"  Foreground="#4d648d"/>
+                        </StackPanel>
+                    </TabItem.Header>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel Width="auto" Height="auto">
+                            <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center"  Foreground="#4d648d" Kind="MapMarkerRadiusOutline" />
+                            <TextBlock HorizontalAlignment="Center"  Foreground="#4d648d" Text="Locations" />
+                        </StackPanel>
+                    </TabItem.Header>
+                </TabItem>
+            </TabControl>
+        </materialDesign:Card>
+
+        <!--<MediaElement Grid.Column="1" Source="C:\Users\Admin\Downloads\Assassin's Creed Rogue - Announcement Trailer.mp4"></MediaElement>-->
     </Grid>
 </Window>
