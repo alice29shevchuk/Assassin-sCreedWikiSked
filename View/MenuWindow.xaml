@@ -12,11 +12,22 @@
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
-        mc:Ignorable="d"
+        xmlns:myCtrls="clr-namespace:Assassin_sCreedWikiSked.View.Controls" xmlns:viewmodel="clr-namespace:Assassin_sCreedWikiSked.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
+    mc:Ignorable="d"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Icon="C:\Users\Admin\source\repos\Assassin`sCreedWikiSked\Resources\photo_2022-12-03_12-08-39.jpg"
         Title="Assassin`s Creed" Height="600" Width="800">
+    <Window.Resources>
+        <DataTemplate x:Key="cardTemplate">
+            <myCtrls:UserCard>
+                
+            </myCtrls:UserCard>
+        </DataTemplate>
+        <ItemsPanelTemplate x:Key="cardPanelTemplate">
+            <WrapPanel></WrapPanel>
+        </ItemsPanelTemplate>
+    </Window.Resources>
     <Grid  Background="#1e1f26">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="73*"/>
@@ -28,7 +39,7 @@
                     <TabItem.Header>
                         <StackPanel Width="auto" Height="auto">
                             <materialDesign:PackIcon Width="24" Height="24" Foreground="#4d648d" HorizontalAlignment="Center" Kind="MovieOpen" />
-                            <TextBlock Foreground="#4d648d" HorizontalAlignment="Center" Text="Series" />
+                            <TextBlock  Foreground="#4d648d" HorizontalAlignment="Center" Text="Series" />
                         </StackPanel>
                     </TabItem.Header>
                 </TabItem>
@@ -58,10 +69,12 @@
                 </TabItem>
             </TabControl>
         </materialDesign:Card>
+        <ListBox ItemsSource="{Binding Series}" Grid.Column="1" ItemTemplate="{StaticResource cardTemplate}" ItemsPanel="{StaticResource cardPanelTemplate}">
+            
+        </ListBox>
 
-
-        <Controls:UserCard Grid.Column="1" HorizontalAlignment="Left" Margin="45,18,0,0" VerticalAlignment="Top" Height="328" Width="223"/>
-
+        <!--<Controls:UserCard Grid.Column="1" HorizontalAlignment="Left" Margin="45,18,0,0" VerticalAlignment="Top" Height="328" Width="223"/>-->
+        
 
         <!--K<MediaElement Grid.Column="1" Source="C:\Users\Admin\Downloads\Assassin's Creed Rogue - Announcement Trailer.mp4"></MediaElement>-->
     </Grid>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assassin_sCreedWikiSked.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,10 +23,7 @@ namespace Assassin_sCreedWikiSked.View
         public MenuWindow()
         {
             InitializeComponent();
-            //MediaPlayer mediaPlayer = new MediaPlayer();
-            //mediaPlayer.Open(new Uri("http://hubblesource.stsci.edu/sources/video/clips/details/images/hst_1.mpg", UriKind.Relative));
-            //mediaPlayer.Play();
-            
+            this.DataContext = new MenuWindowViewModel();
         }
     }
 }

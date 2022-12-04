@@ -17,6 +17,6 @@
             </Border.Effect>
         </Border>
         <Image Grid.Row="0" Margin="10,10,10,10" Source="C:\Users\Admin\OneDrive\Рабочий стол\course project\ekaterina_chernenko.jpg"></Image>
-        <TextBlock Grid.Row="1" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#d0e1f9" FontFamily="Niagara Engraved" Height="44" Width="44" TextWrapping="Wrap">Test</TextBlock>
+        <TextBlock Grid.Row="1" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#d0e1f9" FontFamily="Niagara Engraved" Height="44" Width="300" TextWrapping="Wrap" Text="{Binding Title}"></TextBlock>
     </Grid>
 </UserControl>
