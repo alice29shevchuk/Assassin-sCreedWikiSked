@@ -63,6 +63,18 @@
             Kind="ChevronDoubleLeft" />
         </Button>
 
-
+        <!--<MediaElement Visibility="Visible"  Grid.Row="0" Grid.ColumnSpan="3" x:Name="media">
+           
+        </MediaElement>-->
+        
+        <!--<MediaElement Grid.ColumnSpan="3" Name="media">
+            
+        </MediaElement>-->
+        <ListBox Name="list">
+            
+        </ListBox>
+        <WebBrowser  Grid.ColumnSpan="3" Name="web">
+           
+        </WebBrowser>
     </Grid>
 </UserControl>
