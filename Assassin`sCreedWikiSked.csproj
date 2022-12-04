@@ -98,6 +98,7 @@
     <Compile Include="Model\Serie.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\MenuWindowViewModel.cs" />
+    <Compile Include="ViewModel\MoreInfoViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\Controls\UserCard.xaml.cs">
       <DependentUpon>UserCard.xaml</DependentUpon>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assassin_sCreedWikiSked.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace Assassin_sCreedWikiSked.View
         public MoreInfoWindow()
         {
             InitializeComponent();
+            this.DataContext = new MoreInfoViewModel();
         }
     }
 }
