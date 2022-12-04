@@ -103,6 +103,9 @@
     <Compile Include="View\Controls\UserCard.xaml.cs">
       <DependentUpon>UserCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Controls\UserPlayer.xaml.cs">
+      <DependentUpon>UserPlayer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MenuWindow.xaml.cs">
       <DependentUpon>MenuWindow.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,10 @@
       <DependentUpon>MoreInfoWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="View\Controls\UserCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\UserPlayer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
