@@ -58,6 +58,6 @@
             </TabControl>
         </materialDesign:Card>
 
-        <!--<MediaElement Grid.Column="1" Source="C:\Users\Admin\Downloads\Assassin's Creed Rogue - Announcement Trailer.mp4"></MediaElement>-->
+        <MediaElement Grid.Column="1" Source="C:\Users\Admin\Downloads\Assassin's Creed Rogue - Announcement Trailer.mp4"></MediaElement>
     </Grid>
 </Window>
