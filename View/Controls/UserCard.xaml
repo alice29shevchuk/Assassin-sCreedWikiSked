@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Assassin_sCreedWikiSked.View.Controls.UserCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Assassin_sCreedWikiSked.View.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="430" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="166*"></RowDefinition>
+            <RowDefinition Height="49*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.RowSpan="2" BorderBrush="#d0e1f9" BorderThickness="1" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15" Color="LightGray" ShadowDepth="8"></DropShadowEffect>
+            </Border.Effect>
+        </Border>
+        <Image Grid.Row="0" Margin="10,10,10,10" Source="C:\Users\Admin\OneDrive\Рабочий стол\course project\ekaterina_chernenko.jpg"></Image>
+        <TextBlock Grid.Row="1" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#d0e1f9" FontFamily="Niagara Engraved" Height="44" Width="44" TextWrapping="Wrap">Test</TextBlock>
+    </Grid>
+</UserControl>
