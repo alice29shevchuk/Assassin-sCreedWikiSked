@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assassin_sCreedWikiSked.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,15 @@ namespace Assassin_sCreedWikiSked.View.Controls
         public UserCard()
         {
             InitializeComponent();
+        }
+        public void MoreInfoBTN(object sender, MouseButtonEventArgs e)
+        {
+            var grid = sender as Grid;
+            if (grid != null)
+            {
+                MoreInfoWindow moreInfoWindow = new MoreInfoWindow();
+                moreInfoWindow.ShowDialog();
+            }
         }
     }
 }

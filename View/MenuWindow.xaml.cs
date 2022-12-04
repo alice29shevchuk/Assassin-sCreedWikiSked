@@ -23,7 +23,20 @@ namespace Assassin_sCreedWikiSked.View
         public MenuWindow()
         {
             InitializeComponent();
-            this.DataContext = new MenuWindowViewModel();
+            
+        }
+        //private Task TaskAsync()
+        //{
+        //    return Task.Run(() => this.DataContext = new MenuWindowViewModel());
+        //}
+        private  void clickSeriesBTN(object sender, MouseButtonEventArgs e)
+        {
+            var tabItem = sender as TabItem;
+            if(tabItem!= null)
+            {
+                this.DataContext = new MenuWindowViewModel();
+                //await TaskAsync();
+            }
         }
     }
 }
