@@ -13,46 +13,7 @@
              Background="{DynamicResource MaterialDesignPaper}"
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="500">
-    <Grid Background="#1e1f26">
-        <Button
-            Style="{StaticResource MaterialDesignIconButton}"
-            ToolTip="MaterialDesignIconButton"
-            Grid.Row="1"
-            Grid.Column="1"
-            Background="#4d648d"
-            Foreground="#d0e1f9"
-            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}">
-            <materialDesign:PackIcon
-            Kind="Play" />
-        </Button>
-        <Button
-            Style="{StaticResource MaterialDesignIconButton}"
-            ToolTip="MaterialDesignIconButton"
-            Grid.Row="1"
-            Grid.Column="3"
-            Width="30"
-            Height="30"
-            HorizontalAlignment="Left"
-            Background="#4d648d"
-            Foreground="#d0e1f9"
-            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}">
-            <materialDesign:PackIcon
-            Kind="ChevronDoubleRight" />
-        </Button>
-        <Button
-            Style="{StaticResource MaterialDesignIconButton}"
-            ToolTip="MaterialDesignIconButton"
-            Grid.Row="1"
-            Grid.Column="0"
-            Width="30"
-            Height="30"
-            HorizontalAlignment="Right"
-            Background="#4d648d"
-            Foreground="#d0e1f9"
-            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}">
-            <materialDesign:PackIcon
-            Kind="ChevronDoubleLeft" />
-        </Button>
+    <Grid>
         <WebBrowser  Grid.ColumnSpan="3" Name="web"></WebBrowser>
     </Grid>
 </UserControl>

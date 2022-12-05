@@ -1,4 +1,5 @@
-﻿using Assassin_sCreedWikiSked.ViewModel;
+﻿using Assassin_sCreedWikiSked.View.Controls;
+using Assassin_sCreedWikiSked.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,10 +26,14 @@ namespace Assassin_sCreedWikiSked.View
             InitializeComponent();
             this.DataContext = new MoreInfoViewModel();
         }
-        public MoreInfoWindow(string title)
+        public MoreInfoWindow(string title,string ID)
         {
             InitializeComponent();
             this.DataContext = new MoreInfoViewModel(title);
+            UserPlayer userPlayer = new UserPlayer(ID);
+            this.gridd.Children.Add(userPlayer);
+            Grid.SetRow(userPlayer, 3);
+            Grid.SetColumnSpan(userPlayer, 2);
         }
     }
 }

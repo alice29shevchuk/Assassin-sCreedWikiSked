@@ -31,7 +31,7 @@ namespace Assassin_sCreedWikiSked.View.Controls
             var grid = sender as Grid;
             if (grid != null)
             {
-                MoreInfoWindow moreInfoWindow = new MoreInfoWindow(this.Title.Text);
+                MoreInfoWindow moreInfoWindow = new MoreInfoWindow(this.Title.Text,this.ID.Text);
                 moreInfoWindow.ShowDialog();
             }
         }

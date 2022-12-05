@@ -21,7 +21,7 @@
     <Window.Resources>
         <converter:ConvertorURI x:Key="ImageConvertor"/>
     </Window.Resources>
-    <Grid Background="#1e1f26" DataContext="{Binding Series}">
+    <Grid Name="gridd" Background="#1e1f26" DataContext="{Binding Series}">
         <Grid.RowDefinitions>
             <RowDefinition Height="239*"/>
             <RowDefinition Height="69*"/>
@@ -39,6 +39,6 @@
         <Image Source="{Binding ImgURI, Converter={StaticResource ImageConvertor}}" Grid.Column="0" Margin="0,3,0,0" Grid.Row="0"/>
         <TextBlock Margin="10 50 0 0" Grid.Column="1" Grid.Row="0" Text="{Binding Title}" Foreground="#d0e1f9" FontSize="40" FontFamily="Niagara Engraved"/>
         <materialDesign:RatingBar x:Name="ReadOnlyRatingBar" Value="{Binding Rating}" Background="#d0e1f9" Foreground="#d0e1f9" Grid.Column="1" Grid.Row="0" Margin="10,100,0,41" IsReadOnly="True" />
-        <Controls:UserPlayer Margin="5 20 0 0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Width="800" Height="239"/>
+        <!--<Controls:UserPlayer  Margin="5 20 0 0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Width="800" Height="239"/>-->
     </Grid>
 </Window>

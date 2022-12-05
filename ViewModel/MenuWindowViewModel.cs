@@ -24,21 +24,12 @@ namespace Assassin_sCreedWikiSked.ViewModel
 			get { return series; }
 			set { series = value; }
 		}
-		private Serie selectedCard;
-
-		public Serie SelectedCard
-        {
-			get { return selectedCard; }
-			set { selectedCard = value; }
-		}
-
         public MenuWindowViewModel(string name)
 		{
 			//
 			//		логика выбора категории
 			//
-			if(name == "series")
-			Series = new ObservableCollection<Serie>(new ModelContext().Series);
+			if(name == "series") Series = new ObservableCollection<Serie>(new ModelContext().Series);
 		}
 		public void OnPropertyChanged([CallerMemberName] string prop = "")
 		{
