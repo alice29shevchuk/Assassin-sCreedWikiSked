@@ -14,15 +14,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="500">
     <Grid Background="#1e1f26">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="293*"></RowDefinition>
-            <RowDefinition Height="57*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="95*"></ColumnDefinition>
-            <ColumnDefinition Width="59*"></ColumnDefinition>
-            <ColumnDefinition Width="96*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
         <Button
             Style="{StaticResource MaterialDesignIconButton}"
             ToolTip="MaterialDesignIconButton"
@@ -62,19 +53,6 @@
             <materialDesign:PackIcon
             Kind="ChevronDoubleLeft" />
         </Button>
-
-        <!--<MediaElement Visibility="Visible"  Grid.Row="0" Grid.ColumnSpan="3" x:Name="media">
-           
-        </MediaElement>-->
-        
-        <!--<MediaElement Grid.ColumnSpan="3" Name="media">
-            
-        </MediaElement>-->
-        <ListBox Name="list">
-            
-        </ListBox>
-        <WebBrowser  Grid.ColumnSpan="3" Name="web">
-           
-        </WebBrowser>
+        <WebBrowser  Grid.ColumnSpan="3" Name="web"></WebBrowser>
     </Grid>
 </UserControl>
