@@ -21,6 +21,6 @@
             </Border.Effect>
         </Border>
         <Image Width="250" Height="280" Grid.Row="0" Margin="10,10,10,10" Source="{Binding ImgURI,Converter={StaticResource ImageConvertor}}"></Image>
-        <TextBlock TextAlignment="Center" Grid.Row="1" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#d0e1f9" FontFamily="Niagara Engraved" Height="60" Width="250" TextWrapping="Wrap" Text="{Binding Title}"></TextBlock>
+        <TextBlock Name="Title" TextAlignment="Center" Grid.Row="1" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#d0e1f9" FontFamily="Niagara Engraved" Height="60" Width="250" TextWrapping="Wrap" Text="{Binding Title}"></TextBlock>
     </Grid>
 </UserControl>

@@ -12,6 +12,7 @@
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:myCtrls="clr-namespace:Assassin_sCreedWikiSked.View.Controls" xmlns:viewmodel="clr-namespace:Assassin_sCreedWikiSked.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
         mc:Ignorable="d"
         ResizeMode="NoResize"
@@ -35,7 +36,7 @@
         </Grid.ColumnDefinitions>
         <materialDesign:Card>
             <TabControl Background="#1e1f26" materialDesign:ColorZoneAssist.Mode="Standard" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignNavigationRailTabControl}">
-                <TabItem MouseLeftButtonUp="clickSeriesBTN">
+                <TabItem Name="series" MouseLeftButtonUp="clickSeriesBTN">
                     <TabItem.Header>
                         <StackPanel Width="auto" Height="auto">
                             <materialDesign:PackIcon Width="24" Height="24" Foreground="#4d648d" HorizontalAlignment="Center" Kind="MovieOpen" />
@@ -43,7 +44,7 @@
                         </StackPanel>
                     </TabItem.Header>
                 </TabItem>
-                <TabItem>
+                <TabItem Name="characters" MouseLeftButtonUp="clickSeriesBTN">
                     <TabItem.Header>
                         <StackPanel Width="auto" Height="auto">
                             <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center" Kind="AccountGroupOutline"  Foreground="#4d648d" />
@@ -51,7 +52,7 @@
                         </StackPanel>
                     </TabItem.Header>
                 </TabItem>
-                <TabItem>
+                <TabItem Name="weapons" MouseLeftButtonUp="clickSeriesBTN">
                     <TabItem.Header>
                         <StackPanel Width="auto" Height="auto">
                             <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center"  Foreground="#4d648d" Kind="Pistol" />
@@ -59,7 +60,7 @@
                         </StackPanel>
                     </TabItem.Header>
                 </TabItem>
-                <TabItem>
+                <TabItem Name="locations" MouseLeftButtonUp="clickSeriesBTN">
                     <TabItem.Header>
                         <StackPanel Width="auto" Height="auto">
                             <materialDesign:PackIcon Width="24" Height="24" HorizontalAlignment="Center"  Foreground="#4d648d" Kind="MapMarkerRadiusOutline" />
@@ -69,8 +70,7 @@
                 </TabItem>
             </TabControl>
         </materialDesign:Card>
-        <ListBox Margin="20" ItemsSource="{Binding Series}" Grid.Column="1" ItemTemplate="{StaticResource cardTemplate}" ItemsPanel="{StaticResource cardPanelTemplate}">
-            
+        <ListBox Name="list" Margin="20" ItemsSource="{Binding Series}" SelectedItem="{Binding SelectedCard}" Grid.Column="1" ItemTemplate="{StaticResource cardTemplate}" ItemsPanel="{StaticResource cardPanelTemplate}">
         </ListBox>
 
         <!--<Controls:UserCard Grid.Column="1" HorizontalAlignment="Left" Margin="45,18,0,0" VerticalAlignment="Top" Height="328" Width="223"/>-->

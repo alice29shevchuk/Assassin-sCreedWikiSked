@@ -22,9 +22,14 @@ namespace Assassin_sCreedWikiSked.ViewModel
             get { return series; }
             set { series = value; }
         }
+       
         public MoreInfoViewModel()
         {
             Series = new ObservableCollection<Serie>(new ModelContext().Series);
+        }
+        public MoreInfoViewModel(string title)
+        {
+            Series = new ObservableCollection<Serie>(new ModelContext().Series.Where(x=> x.Title == title));
         }
         public void OnPropertyChanged([CallerMemberName] string prop = "")
         {

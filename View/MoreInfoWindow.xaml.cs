@@ -25,5 +25,10 @@ namespace Assassin_sCreedWikiSked.View
             InitializeComponent();
             this.DataContext = new MoreInfoViewModel();
         }
+        public MoreInfoWindow(string title)
+        {
+            InitializeComponent();
+            this.DataContext = new MoreInfoViewModel(title);
+        }
     }
 }

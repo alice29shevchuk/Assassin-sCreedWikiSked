@@ -34,7 +34,7 @@ namespace Assassin_sCreedWikiSked.View
             var tabItem = sender as TabItem;
             if(tabItem!= null)
             {
-                this.DataContext = new MenuWindowViewModel();
+                this.DataContext = new MenuWindowViewModel(tabItem.Name);
                 //await TaskAsync();
             }
         }

@@ -1,4 +1,5 @@
-﻿using Assassin_sCreedWikiSked.ViewModel;
+﻿using Assassin_sCreedWikiSked.Model;
+using Assassin_sCreedWikiSked.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,7 @@ namespace Assassin_sCreedWikiSked.View.Controls
             var grid = sender as Grid;
             if (grid != null)
             {
-                MoreInfoWindow moreInfoWindow = new MoreInfoWindow();
+                MoreInfoWindow moreInfoWindow = new MoreInfoWindow(this.Title.Text);
                 moreInfoWindow.ShowDialog();
             }
         }

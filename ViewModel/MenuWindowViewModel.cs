@@ -1,4 +1,5 @@
 ﻿using Assassin_sCreedWikiSked.Model;
+using GalaSoft.MvvmLight.CommandWpf;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Assassin_sCreedWikiSked.ViewModel
 {
@@ -22,8 +24,20 @@ namespace Assassin_sCreedWikiSked.ViewModel
 			get { return series; }
 			set { series = value; }
 		}
-		public MenuWindowViewModel()
+		private Serie selectedCard;
+
+		public Serie SelectedCard
+        {
+			get { return selectedCard; }
+			set { selectedCard = value; }
+		}
+
+        public MenuWindowViewModel(string name)
 		{
+			//
+			//		логика выбора категории
+			//
+			if(name == "series")
 			Series = new ObservableCollection<Serie>(new ModelContext().Series);
 		}
 		public void OnPropertyChanged([CallerMemberName] string prop = "")
