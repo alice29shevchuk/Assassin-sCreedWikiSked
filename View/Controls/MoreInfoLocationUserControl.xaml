@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="Assassin_sCreedWikiSked.View.Controls.MoreInfoLocationUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Assassin_sCreedWikiSked.View.Controls"
+             xmlns:converter="clr-namespace:Assassin_sCreedWikiSked.Convertor"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="300">
+    <UserControl.Resources>
+        <converter:ConvertorURI x:Key="ImageConvertor"></converter:ConvertorURI>
+    </UserControl.Resources>
+    <Grid DataContext="{Binding Locations}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="37*"></ColumnDefinition>
+            <ColumnDefinition Width="63*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.RowSpan="9" Grid.ColumnSpan="2" BorderBrush="#d0e1f9" BorderThickness="1" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="8" Color="#d0e1f9" ShadowDepth="5" Direction="50"></DropShadowEffect>
+            </Border.Effect>
+        </Border>
+        <Border Grid.Row="1" BorderThickness="0 2 2 2" BorderBrush="#d0e1f9"></Border>
+        <Border Grid.Row="1" Grid.Column="1" BorderThickness="0 2 0 2" BorderBrush="#d0e1f9"></Border>
+        <Border Grid.Row="2" BorderThickness="0 0 2 2" BorderBrush="#d0e1f9"></Border>
+        <Border Grid.Row="2" Grid.Column="1" BorderThickness="0 0 0 2" BorderBrush="#d0e1f9"></Border>
+        <Border Grid.Row="3" BorderThickness="0 0 2 2" BorderBrush="#d0e1f9"></Border>
+        <Border Grid.Row="3" Grid.Column="1" BorderThickness="0 0 0 2" BorderBrush="#d0e1f9"></Border>
+        <Border Grid.Row="4" BorderThickness="0 0 2 2" BorderBrush="#d0e1f9"></Border>
+        <Border Grid.Row="4" Grid.Column="1" BorderThickness="0 0 0 2" BorderBrush="#d0e1f9"></Border>
+        <Border Grid.Row="5" BorderThickness="0 0 2 2" BorderBrush="#d0e1f9"></Border>
+        <Border Grid.Row="5" Grid.Column="1" BorderThickness="0 0 0 2" BorderBrush="#d0e1f9"></Border>
+        <Border Grid.Row="6" BorderThickness="0 0 2 0" BorderBrush="#d0e1f9"></Border>
+        <Border Grid.Row="6" Grid.Column="1" BorderThickness="0 0 0 0" BorderBrush="#d0e1f9"></Border>
+        
+        
+        
+        <Image Width="300" Height="200" Grid.Row="0" Grid.ColumnSpan="2" Source="{Binding ImageUri,Converter={StaticResource ImageConvertor}}"/>
+        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Foreground="#d0e1f9" FontSize="15" Text="{Binding Status}"></TextBlock>
+        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Foreground="#d0e1f9" FontSize="15" Text="{Binding Ruler}" ></TextBlock>
+        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Foreground="#d0e1f9" FontSize="15" Text="{Binding Factions}" ></TextBlock>
+        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Foreground="#d0e1f9" FontSize="15" Text="{Binding Founder}"/>
+        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Foreground="#d0e1f9" FontSize="15" Text="{Binding Places}"/>
+        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="1" Foreground="#d0e1f9" FontSize="15" Text="{Binding AssassinGoals}"/>
+
+        <TextBlock Grid.Row="1"   Text="Status" FontSize="15" Foreground="#d0e1f9" TextAlignment="Center" VerticalAlignment="Center" Height="19"></TextBlock>
+        <TextBlock Grid.Row="2" Text="Ruler" FontSize="15" Foreground="#d0e1f9" TextAlignment="Center" VerticalAlignment="Center" Height="20"></TextBlock>
+        <TextBlock Grid.Row="3" Text="Factions" FontSize="15" Foreground="#d0e1f9" TextAlignment="Center" VerticalAlignment="Center" Height="20"></TextBlock>
+        <TextBlock Grid.Row="4" Text="Founder" FontSize="15" Foreground="#d0e1f9" TextAlignment="Center" VerticalAlignment="Center" Height="20"></TextBlock>
+        <TextBlock Grid.Row="5" Text="Places" FontSize="15" Foreground="#d0e1f9" TextAlignment="Center" VerticalAlignment="Center" Height="20"></TextBlock>
+        <TextBlock Grid.Row="6" Text="Assassin Goals" FontSize="15" Foreground="#d0e1f9" TextAlignment="Center" VerticalAlignment="Center" Height="20"></TextBlock>
+    </Grid>
+</UserControl>

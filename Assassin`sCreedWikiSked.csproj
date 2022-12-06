@@ -164,6 +164,9 @@
     <Compile Include="View\Controls\LocationUserControl.xaml.cs">
       <DependentUpon>LocationUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Controls\MoreInfoLocationUserControl.xaml.cs">
+      <DependentUpon>MoreInfoLocationUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Controls\UserCard.xaml.cs">
       <DependentUpon>UserCard.xaml</DependentUpon>
     </Compile>
@@ -197,6 +200,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Controls\LocationUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\MoreInfoLocationUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

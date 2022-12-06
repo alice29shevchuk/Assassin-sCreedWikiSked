@@ -30,12 +30,12 @@ namespace Assassin_sCreedWikiSked.View
         {
             InitializeComponent();
             this.DataContext = new MoreInfoCharactersViewModel(name);
-            CharacterCardUserControl characterCardUserControl = new CharacterCardUserControl(name);
-            characterCardUserControl.Width = 400;
-            characterCardUserControl.Height = 800;
-            this.gridCh.Children.Add(characterCardUserControl);
-            Grid.SetRow(characterCardUserControl, 3);
-            Grid.SetColumn(characterCardUserControl, 1);
+            //CharacterCardUserControl characterCardUserControl = new CharacterCardUserControl(name);
+            //characterCardUserControl.Width = 400;
+            //characterCardUserControl.Height = 800;
+            //this.gridCh.Children.Add(characterCardUserControl);
+            //Grid.SetRow(characterCardUserControl, 3);
+            //Grid.SetColumn(characterCardUserControl, 1);
         }
     }
 }

@@ -28,16 +28,16 @@ namespace Assassin_sCreedWikiSked.View
         }
         public MoreInfoLocationWindow(string name)
         {
-            this.DataContext = new LocationViewModel();
             InitializeComponent();
-            this.DataContext = new MoreInfoLocationWindow(name);
-            CharacterCardUserControl characterCardUserControl = new CharacterCardUserControl(name);
-            //characterCardUserControl.Width = 400;
-            //characterCardUserControl.Height = 800;
-            this.gridLoc.Children.Add(characterCardUserControl);
-            Grid.SetRow(characterCardUserControl, 0);
-            Grid.SetColumn(characterCardUserControl, 1);
-            Grid.SetColumnSpan(characterCardUserControl,3);
+            this.DataContext = new LocationViewModel(name);
+            MoreInfoLocationUserControl moreInfoLocationUserControl = new MoreInfoLocationUserControl(name);
+            moreInfoLocationUserControl.Margin = new Thickness(30, 30, 30, 30);
+            //moreInfoLocationUserControl.Width = 200;
+            //moreInfoLocationUserControl.Height = 400;
+            this.gridLoc.Children.Add(moreInfoLocationUserControl);
+            //Grid.SetRow(moreInfoLocationUserControl, 0);
+            Grid.SetColumn(moreInfoLocationUserControl, 1);
+            Grid.SetRowSpan(moreInfoLocationUserControl, 3);
         }
     }
 }
