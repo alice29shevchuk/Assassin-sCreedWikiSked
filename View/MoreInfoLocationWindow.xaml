@@ -20,6 +20,7 @@
                 <RowDefinition Height="51*"></RowDefinition>
                 <RowDefinition Height="590*" ></RowDefinition>
             </Grid.RowDefinitions>
+            
             <Border Grid.Column="0" Grid.Row="2" Height="60" Margin="0 0 0 540" BorderBrush="#d0e1f9" BorderThickness="0 2 2 2"></Border>
             <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding Title}" FontSize="40" Foreground="#d0e1f9" FontFamily="Niagara Engraved"></TextBlock>
             <TextBlock Text="Description" Grid.Column="0" Grid.Row="2" Foreground="#d0e1f9" FontFamily="Niagara Engraved" FontSize="40" Margin="10"></TextBlock>
