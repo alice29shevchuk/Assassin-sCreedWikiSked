@@ -8,12 +8,13 @@ namespace Assassin_sCreedWikiSked.Model
     public partial class ModelContext : DbContext
     {
         public ModelContext()
-            : base("name=ModelContext2")
+            : base("name=ModelContext3")
         {
         }
 
         public virtual DbSet<Character> Characters { get; set; }
         public virtual DbSet<Serie> Series { get; set; }
+        public virtual DbSet<Weapon> Weapons { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -63,6 +64,10 @@ namespace Assassin_sCreedWikiSked.Model
 
             modelBuilder.Entity<Serie>()
                 .Property(e => e.VideoPath)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Weapon>()
+                .Property(e => e.ImageUri)
                 .IsUnicode(false);
         }
     }

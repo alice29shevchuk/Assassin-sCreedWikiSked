@@ -28,10 +28,17 @@
             <myCtrls:CharactersCard>
             </myCtrls:CharactersCard>
         </DataTemplate>
+        <DataTemplate x:Key="cardTemplate2">
+            <myCtrls:WeaponUserControl>
+            </myCtrls:WeaponUserControl>
+        </DataTemplate>
         <ItemsPanelTemplate x:Key="cardPanelTemplate">
             <WrapPanel></WrapPanel>
         </ItemsPanelTemplate>
         <ItemsPanelTemplate x:Key="cardPanelTemplate1">
+            <WrapPanel></WrapPanel>
+        </ItemsPanelTemplate>
+        <ItemsPanelTemplate x:Key="cardPanelTemplate2">
             <WrapPanel></WrapPanel>
         </ItemsPanelTemplate>
     </Window.Resources>
@@ -77,23 +84,20 @@
             </TabControl>
         </materialDesign:Card>
         <!--Series-->
-        <ListBox Name="list" Margin="20" ItemsSource="{Binding Series}" SelectedItem="{Binding SelectedCard}" Grid.Column="1" ItemTemplate="{StaticResource cardTemplate}" ItemsPanel="{StaticResource cardPanelTemplate}">
+        <ListBox Name="listSerie" Margin="20" ItemsSource="{Binding Series}" SelectedItem="{Binding SelectedCard}" Grid.Column="1" ItemTemplate="{StaticResource cardTemplate}" ItemsPanel="{StaticResource cardPanelTemplate}">
         </ListBox>
         <!--Characters-->
-        <ListBox Name="list2" Margin="20" ItemsSource="{Binding Characters}" SelectedItem="{Binding SelectedCard}"  Grid.Column="1" ItemTemplate="{StaticResource cardTemplate1}" ItemsPanel="{StaticResource cardPanelTemplate1}">
+        <ListBox Name="listCharacter" Margin="20" ItemsSource="{Binding Characters}" SelectedItem="{Binding SelectedCard}"  Grid.Column="1" ItemTemplate="{StaticResource cardTemplate1}" ItemsPanel="{StaticResource cardPanelTemplate1}">
         </ListBox>
-        
-        
-        
-        
-        
-        <!--<MediaElement Visibility="Visible" Grid.Column="1" Name="audio" ></MediaElement>-->
-        
-        <!--<WebBrowser Grid.Column="1" Name="audio"></WebBrowser>-->
-
-        <!--<Controls:UserCard Grid.Column="1" HorizontalAlignment="Left" Margin="45,18,0,0" VerticalAlignment="Top" Height="328" Width="223"/>-->
+        <!--Weapons-->
+        <ListBox Name="listWeapon" Margin="20" ItemsSource="{Binding Weapons}" SelectedItem="{Binding SelectedCard}"  Grid.Column="1" ItemTemplate="{StaticResource cardTemplate2}" ItemsPanel="{StaticResource cardPanelTemplate2}">
+        </ListBox>
+        <!--locations-->
         
 
-        <!--K<MediaElement Grid.Column="1" Source="C:\Users\Admin\Downloads\Assassin's Creed Rogue - Announcement Trailer.mp4"></MediaElement>-->
+
+
+
+
     </Grid>
 </Window>

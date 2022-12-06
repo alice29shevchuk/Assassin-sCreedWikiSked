@@ -44,13 +44,21 @@ namespace Assassin_sCreedWikiSked.View
             {
                 if(tabItem.Name == "characters")
                 {
-                    this.list.Visibility = Visibility.Hidden;
-                    this.list2.Visibility = Visibility.Visible;
+                    this.listSerie.Visibility = Visibility.Hidden;
+                    this.listWeapon.Visibility = Visibility.Hidden;
+                    this.listCharacter.Visibility = Visibility.Visible;
                 }
                 if(tabItem.Name == "series")
                 {
-                    this.list2.Visibility = Visibility.Hidden;
-                    this.list.Visibility = Visibility.Visible;
+                    this.listWeapon.Visibility = Visibility.Hidden;
+                    this.listCharacter.Visibility = Visibility.Hidden;
+                    this.listSerie.Visibility = Visibility.Visible;
+                }
+                if(tabItem.Name == "weapons")
+                {
+                    this.listWeapon.Visibility = Visibility.Visible;
+                    this.listCharacter.Visibility = Visibility.Hidden;
+                    this.listSerie.Visibility = Visibility.Hidden;
                 }
                 this.DataContext = new MenuWindowViewModel(tabItem.Name);
                 //await TaskAsync();
