@@ -41,18 +41,7 @@ namespace Assassin_sCreedWikiSked.View.Controls
         public void PlayVideo(string ID)
         {
 
-            //
-            //    path video
-            //
-
             MenuWindowViewModel menuWindowViewModel = new MenuWindowViewModel("series");
-            //MessageBox.Show(menuWindowViewModel.Series[Convert.ToInt32(ID)-1].VideoPath);
-
-            //MessageBox.Show(menuWindowViewModel.Series.Where(x=>x.Title == title));
-            //MessageBox.Show(this.path.Text);
-
-            //MessageBox.Show(menuWindowViewModel.Series.Where(x => x.VideoPath == Uri).ToString());
-
             Match match = YouTubeURELIDRegex.Match(menuWindowViewModel.Series[Convert.ToInt32(ID) - 1].VideoPath);
             String id = match.Groups["v"].Value;
             string url1 = "https://www.youtube.com/embed/" + id;

@@ -24,14 +24,21 @@ namespace Assassin_sCreedWikiSked.ViewModel
 			get { return series; }
 			set { series = value; }
 		}
+        private ObservableCollection<Character> characters;
+        public ObservableCollection<Character> Characters
+        {
+            get { return characters; }
+            set { characters = value; }
+        }
         public MenuWindowViewModel(string name)
 		{
 			//
 			//		логика выбора категории
 			//
 			if(name == "series") Series = new ObservableCollection<Serie>(new ModelContext().Series);
-		}
-		public void OnPropertyChanged([CallerMemberName] string prop = "")
+            if(name == "characters") Characters = new ObservableCollection<Character>(new ModelContext().Characters);
+        }
+        public void OnPropertyChanged([CallerMemberName] string prop = "")
 		{
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
 		}

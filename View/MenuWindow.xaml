@@ -22,10 +22,16 @@
     <Window.Resources>
         <DataTemplate x:Key="cardTemplate">
             <myCtrls:UserCard>
-                
             </myCtrls:UserCard>
         </DataTemplate>
+        <DataTemplate x:Key="cardTemplate1">
+            <myCtrls:CharactersCard>
+            </myCtrls:CharactersCard>
+        </DataTemplate>
         <ItemsPanelTemplate x:Key="cardPanelTemplate">
+            <WrapPanel></WrapPanel>
+        </ItemsPanelTemplate>
+        <ItemsPanelTemplate x:Key="cardPanelTemplate1">
             <WrapPanel></WrapPanel>
         </ItemsPanelTemplate>
     </Window.Resources>
@@ -70,8 +76,20 @@
                 </TabItem>
             </TabControl>
         </materialDesign:Card>
+        <!--Series-->
         <ListBox Name="list" Margin="20" ItemsSource="{Binding Series}" SelectedItem="{Binding SelectedCard}" Grid.Column="1" ItemTemplate="{StaticResource cardTemplate}" ItemsPanel="{StaticResource cardPanelTemplate}">
         </ListBox>
+        <!--Characters-->
+        <ListBox Name="list2" Margin="20" ItemsSource="{Binding Characters}" SelectedItem="{Binding SelectedCard}"  Grid.Column="1" ItemTemplate="{StaticResource cardTemplate1}" ItemsPanel="{StaticResource cardPanelTemplate1}">
+        </ListBox>
+        
+        
+        
+        
+        
+        <!--<MediaElement Visibility="Visible" Grid.Column="1" Name="audio" ></MediaElement>-->
+        
+        <!--<WebBrowser Grid.Column="1" Name="audio"></WebBrowser>-->
 
         <!--<Controls:UserCard Grid.Column="1" HorizontalAlignment="Left" Margin="45,18,0,0" VerticalAlignment="Top" Height="328" Width="223"/>-->
         

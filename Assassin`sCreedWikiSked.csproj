@@ -143,12 +143,20 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Convertor\ConvertorURI.cs" />
+    <Compile Include="Model\Character.cs" />
     <Compile Include="Model\ModelContext.cs" />
     <Compile Include="Model\Serie.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\MenuWindowViewModel.cs" />
+    <Compile Include="ViewModel\MoreInfoCharactersViewModel.cs" />
     <Compile Include="ViewModel\MoreInfoViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\Controls\CharacterCardUserControl.xaml.cs">
+      <DependentUpon>CharacterCardUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\CharactersCard.xaml.cs">
+      <DependentUpon>CharactersCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Controls\UserCard.xaml.cs">
       <DependentUpon>UserCard.xaml</DependentUpon>
     </Compile>
@@ -158,9 +166,20 @@
     <Compile Include="View\MenuWindow.xaml.cs">
       <DependentUpon>MenuWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MoreInfoCharacterWindow.xaml.cs">
+      <DependentUpon>MoreInfoCharacterWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MoreInfoWindow.xaml.cs">
       <DependentUpon>MoreInfoWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\Controls\CharacterCardUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\CharactersCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Controls\UserCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -182,6 +201,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\MenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MoreInfoCharacterWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
