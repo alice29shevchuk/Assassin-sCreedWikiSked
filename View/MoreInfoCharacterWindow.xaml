@@ -27,7 +27,7 @@
                 <RowDefinition Height="242*"/>
             </Grid.RowDefinitions>
             <TextBlock Margin="20 0 0 0" FontSize="35" Foreground="#d0e1f9" Grid.Row="0" Grid.ColumnSpan="2" Name="chName" Text="{Binding Name}" FontFamily="Niagara Engraved"></TextBlock>
-            <TextBlock TextWrapping="Wrap" Margin="35,35,35,18" Foreground="#d0e1f9" Grid.Row="1" Grid.ColumnSpan="2" FontSize="35" Text="{Binding Statement}" FontFamily="Niagara Engraved"/>
+            <TextBlock TextAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Margin="35,35,35,18" Foreground="#d0e1f9" Grid.Row="1" Grid.ColumnSpan="2" FontSize="35" Text="{Binding Statement}" FontFamily="Freestyle Script"/>
             <TextBlock Foreground="#d0e1f9" FontSize="18" ScrollViewer.VerticalScrollBarVisibility="Disabled"  TextWrapping="Wrap" Margin="10,10,10,10" Grid.Column="0" Grid.Row="3" Text="{Binding Description}"/>
         </Grid>
     </ScrollViewer>
