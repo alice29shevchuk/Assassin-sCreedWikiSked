@@ -32,6 +32,10 @@
             <myCtrls:WeaponUserControl>
             </myCtrls:WeaponUserControl>
         </DataTemplate>
+        <DataTemplate x:Key="cardTemplate3">
+            <myCtrls:LocationUserControl>
+            </myCtrls:LocationUserControl>
+        </DataTemplate>
         <ItemsPanelTemplate x:Key="cardPanelTemplate">
             <WrapPanel></WrapPanel>
         </ItemsPanelTemplate>
@@ -39,6 +43,9 @@
             <WrapPanel></WrapPanel>
         </ItemsPanelTemplate>
         <ItemsPanelTemplate x:Key="cardPanelTemplate2">
+            <WrapPanel></WrapPanel>
+        </ItemsPanelTemplate>
+        <ItemsPanelTemplate x:Key="cardPanelTemplate3">
             <WrapPanel></WrapPanel>
         </ItemsPanelTemplate>
     </Window.Resources>
@@ -93,7 +100,7 @@
         <ListBox Name="listWeapon" Margin="20" ItemsSource="{Binding Weapons}" SelectedItem="{Binding SelectedCard}"  Grid.Column="1" ItemTemplate="{StaticResource cardTemplate2}" ItemsPanel="{StaticResource cardPanelTemplate2}">
         </ListBox>
         <!--locations-->
-        
+        <ListBox Name="listLocation"  Margin="20" ItemsSource="{Binding Locations}" SelectedItem="{Binding SelectedCard}"  Grid.Column="1" ItemTemplate="{StaticResource cardTemplate3}" ItemsPanel="{StaticResource cardPanelTemplate3}"></ListBox>
 
 
 

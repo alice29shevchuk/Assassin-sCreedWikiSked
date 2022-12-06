@@ -36,6 +36,12 @@ namespace Assassin_sCreedWikiSked.ViewModel
             get { return weapons; }
             set { weapons = value; }
         }
+        private ObservableCollection<Location> locations;
+        public ObservableCollection<Location> Locations
+        {
+            get { return locations; }
+            set { locations = value; }
+        }
         public MenuWindowViewModel(string name)
 		{
 			//
@@ -44,6 +50,8 @@ namespace Assassin_sCreedWikiSked.ViewModel
 			if(name == "series") Series = new ObservableCollection<Serie>(new ModelContext().Series);
             if(name == "characters") Characters = new ObservableCollection<Character>(new ModelContext().Characters);
             if (name == "weapons") Weapons = new ObservableCollection<Weapon>(new ModelContext().Weapons);
+            if (name == "locations") Locations = new ObservableCollection<Location>(new ModelContext().Locations);
+
 
         }
         public void OnPropertyChanged([CallerMemberName] string prop = "")

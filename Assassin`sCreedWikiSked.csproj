@@ -144,9 +144,11 @@
     </ApplicationDefinition>
     <Compile Include="Convertor\ConvertorURI.cs" />
     <Compile Include="Model\Character.cs" />
+    <Compile Include="Model\Location.cs" />
     <Compile Include="Model\ModelContext.cs" />
     <Compile Include="Model\Serie.cs" />
     <Compile Include="Model\Weapon.cs" />
+    <Compile Include="ViewModel\LocationViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\MenuWindowViewModel.cs" />
     <Compile Include="ViewModel\MoreInfoCharactersViewModel.cs" />
@@ -158,6 +160,9 @@
     </Compile>
     <Compile Include="View\Controls\CharactersCard.xaml.cs">
       <DependentUpon>CharactersCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\LocationUserControl.xaml.cs">
+      <DependentUpon>LocationUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Controls\UserCard.xaml.cs">
       <DependentUpon>UserCard.xaml</DependentUpon>
@@ -174,6 +179,9 @@
     <Compile Include="View\MoreInfoCharacterWindow.xaml.cs">
       <DependentUpon>MoreInfoCharacterWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MoreInfoLocationWindow.xaml.cs">
+      <DependentUpon>MoreInfoLocationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MoreInfoWeaponWindow.xaml.cs">
       <DependentUpon>MoreInfoWeaponWindow.xaml</DependentUpon>
     </Compile>
@@ -185,6 +193,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Controls\CharactersCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\LocationUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -217,6 +229,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MoreInfoCharacterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MoreInfoLocationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -8,11 +8,12 @@ namespace Assassin_sCreedWikiSked.Model
     public partial class ModelContext : DbContext
     {
         public ModelContext()
-            : base("name=ModelContext3")
+            : base("name=ModelContext4")
         {
         }
 
         public virtual DbSet<Character> Characters { get; set; }
+        public virtual DbSet<Location> Locations { get; set; }
         public virtual DbSet<Serie> Series { get; set; }
         public virtual DbSet<Weapon> Weapons { get; set; }
 
@@ -52,6 +53,10 @@ namespace Assassin_sCreedWikiSked.Model
 
             modelBuilder.Entity<Character>()
                 .Property(e => e.Appearances)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Location>()
+                .Property(e => e.ImageUri)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Serie>()

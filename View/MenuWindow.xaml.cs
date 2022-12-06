@@ -47,18 +47,28 @@ namespace Assassin_sCreedWikiSked.View
                     this.listSerie.Visibility = Visibility.Hidden;
                     this.listWeapon.Visibility = Visibility.Hidden;
                     this.listCharacter.Visibility = Visibility.Visible;
+                    this.listLocation.Visibility = Visibility.Hidden;
                 }
                 if(tabItem.Name == "series")
                 {
                     this.listWeapon.Visibility = Visibility.Hidden;
                     this.listCharacter.Visibility = Visibility.Hidden;
                     this.listSerie.Visibility = Visibility.Visible;
+                    this.listLocation.Visibility = Visibility.Hidden;
                 }
                 if(tabItem.Name == "weapons")
                 {
                     this.listWeapon.Visibility = Visibility.Visible;
                     this.listCharacter.Visibility = Visibility.Hidden;
                     this.listSerie.Visibility = Visibility.Hidden;
+                    this.listLocation.Visibility = Visibility.Hidden;
+                }
+                if(tabItem.Name == "locations")
+                {
+                    this.listWeapon.Visibility = Visibility.Hidden;
+                    this.listCharacter.Visibility = Visibility.Hidden;
+                    this.listSerie.Visibility = Visibility.Hidden;
+                    this.listLocation.Visibility = Visibility.Visible;
                 }
                 this.DataContext = new MenuWindowViewModel(tabItem.Name);
                 //await TaskAsync();
