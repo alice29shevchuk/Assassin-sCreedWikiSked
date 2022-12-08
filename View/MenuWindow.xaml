@@ -101,10 +101,5 @@
         </ListBox>
         <!--locations-->
         <ListBox Name="listLocation"  Margin="20" ItemsSource="{Binding Locations}" SelectedItem="{Binding SelectedCard}"  Grid.Column="1" ItemTemplate="{StaticResource cardTemplate3}" ItemsPanel="{StaticResource cardPanelTemplate3}"></ListBox>
-
-
-
-
-
     </Grid>
 </Window>
