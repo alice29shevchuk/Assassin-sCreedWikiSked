@@ -1,4 +1,5 @@
-﻿using Assassin_sCreedWikiSked.ViewModel;
+﻿using Assassin_sCreedWikiSked.Model;
+using Assassin_sCreedWikiSked.ViewModel;
 using CefSharp;
 using CefSharp.Wpf;
 using LiveCharts.Wpf;
@@ -32,19 +33,20 @@ namespace Assassin_sCreedWikiSked.View.Controls
     public partial class UserPlayer : UserControl
     {
         public Regex YouTubeURELIDRegex = new Regex(@"[\?&]v=(?<v>[^&]+)");
-        public UserPlayer(string Id)
+        public UserPlayer(string title)
         {
             InitializeComponent();
-            PlayVideo(Id);
+            PlayVideo(title);
         }
 
-        public void PlayVideo(string ID)
+        public void PlayVideo(string title)
         {
 
             MenuWindowViewModel menuWindowViewModel = new MenuWindowViewModel("series");
             try
             {
-                Match match = YouTubeURELIDRegex.Match(menuWindowViewModel.Series[Convert.ToInt32(ID) - 1].VideoPath);
+                var serie = menuWindowViewModel.Series.Where(x => x.Title == title);
+                Match match = YouTubeURELIDRegex.Match(serie.First().VideoPath);
                 String id = match.Groups["v"].Value;
                 string url1 = "https://www.youtube.com/embed/" + id;
                 string page = "<html>" +

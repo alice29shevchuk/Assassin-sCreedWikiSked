@@ -30,7 +30,7 @@ namespace Assassin_sCreedWikiSked.View
         {
             InitializeComponent();
             this.DataContext = new MoreInfoViewModel(title);
-            UserPlayer userPlayer = new UserPlayer(ID);
+            UserPlayer userPlayer = new UserPlayer(title);
             this.gridd.Children.Add(userPlayer);
             Grid.SetRow(userPlayer, 3);
             Grid.SetColumnSpan(userPlayer, 2);
